@@ -10,6 +10,18 @@
 
 @interface DLMKStarWarsCharacter : NSObject
 
+#pragma mark - Class Methods
+
++ (instancetype) starWarsCharacterWithName: (NSString*)name;
+
+#pragma mark - Properties
 @property NSString* name;
+
+#pragma mark - Instance Methods
+
+//Desginated Initializer
+- (instancetype) initWithName: (NSString*) name;
+
+- (BOOL) isEqualToStarWarsCharacter: (DLMKStarWarsCharacter*) other;
 
 @end

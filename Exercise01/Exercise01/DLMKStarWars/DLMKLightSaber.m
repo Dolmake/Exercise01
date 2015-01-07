@@ -42,7 +42,7 @@
                          G:(CGFloat)g
                          B:(CGFloat)b{
     
-    if ( self = [self init]){
+    if ( self = [super init]){
         _color = [NSColor colorWithRed:r
                                  green:g
                                   blue:b
