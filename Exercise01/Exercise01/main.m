@@ -14,6 +14,19 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         NSLog(@"Hello, World!");
+        
+        
+        DLMKLightSaber* blueSaber =[DLMKLightSaber lightSaberBlue];
+        DLMKLightSaber* redSaber = [DLMKLightSaber lightSaberRed];
+        DLMKLightSaber* blueSaber2 = [DLMKLightSaber lightSaberBlue];
+        DLMKLightSaber* blueSaber3 = blueSaber;
+
+        
+        //NSLog(@"Light saber created : %@", blueSaber);
+        NSLog(@"[blueSaber isEqual: redSaber] = %@", ([blueSaber isEqual:redSaber] ? @"YES" : @"NO"));
+        NSLog(@"[blueSaber isEqual: blueSaber2] = %@", ([blueSaber isEqual:blueSaber2] ? @"YES" : @"NO"));
+        NSLog(@"[blueSaber isEqual: blueSaber3] = %@", ([blueSaber isEqual:blueSaber3] ? @"YES" : @"NO"));
+        
     }
     return 0;
 }

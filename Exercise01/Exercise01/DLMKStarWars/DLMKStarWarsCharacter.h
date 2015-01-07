@@ -10,4 +10,6 @@
 
 @interface DLMKStarWarsCharacter : NSObject
 
+@property NSString* name;
+
 @end

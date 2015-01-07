@@ -8,7 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "DLMKStarWarsCharacter.h"
+#import "DLMKLightSaber.h"
 
-@interface DLMKJedi : NSObject
+@interface DLMKJedi : DLMKStarWarsCharacter
+
+@property int midichlorians;
+@property DLMKLightSaber* lightSaber;
+@property DLMKJedi* padawanOf;
 
 @end
