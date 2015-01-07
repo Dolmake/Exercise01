@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DLMKStarWars/DLMKLightSaber.h"
+#import "DLMKStarWars/DLMKStarWarsCharacter.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {

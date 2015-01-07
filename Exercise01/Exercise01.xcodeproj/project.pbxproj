@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		65ADF3251A5D24CB0064C628 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65ADF3241A5D24CB0064C628 /* main.m */; };
+		65ADF32E1A5D28310064C628 /* DLMKLightSaber.m in Sources */ = {isa = PBXBuildFile; fileRef = 65ADF32D1A5D28310064C628 /* DLMKLightSaber.m */; };
+		65ADF3311A5D289E0064C628 /* DLMKStarWarsCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65ADF3301A5D289E0064C628 /* DLMKStarWarsCharacter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		65ADF3211A5D24CB0064C628 /* Exercise01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Exercise01; sourceTree = BUILT_PRODUCTS_DIR; };
 		65ADF3241A5D24CB0064C628 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		65ADF32C1A5D28310064C628 /* DLMKLightSaber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLMKLightSaber.h; path = DLMKStarWars/DLMKLightSaber.h; sourceTree = "<group>"; };
+		65ADF32D1A5D28310064C628 /* DLMKLightSaber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLMKLightSaber.m; path = DLMKStarWars/DLMKLightSaber.m; sourceTree = "<group>"; };
+		65ADF32F1A5D289E0064C628 /* DLMKStarWarsCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLMKStarWarsCharacter.h; path = DLMKStarWars/DLMKStarWarsCharacter.h; sourceTree = "<group>"; };
+		65ADF3301A5D289E0064C628 /* DLMKStarWarsCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLMKStarWarsCharacter.m; path = DLMKStarWars/DLMKStarWarsCharacter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +63,21 @@
 		65ADF3231A5D24CB0064C628 /* Exercise01 */ = {
 			isa = PBXGroup;
 			children = (
+				65ADF32B1A5D27500064C628 /* DLMKStarWars */,
 				65ADF3241A5D24CB0064C628 /* main.m */,
 			);
 			path = Exercise01;
+			sourceTree = "<group>";
+		};
+		65ADF32B1A5D27500064C628 /* DLMKStarWars */ = {
+			isa = PBXGroup;
+			children = (
+				65ADF32C1A5D28310064C628 /* DLMKLightSaber.h */,
+				65ADF32D1A5D28310064C628 /* DLMKLightSaber.m */,
+				65ADF32F1A5D289E0064C628 /* DLMKStarWarsCharacter.h */,
+				65ADF3301A5D289E0064C628 /* DLMKStarWarsCharacter.m */,
+			);
+			name = DLMKStarWars;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +136,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65ADF32E1A5D28310064C628 /* DLMKLightSaber.m in Sources */,
+				65ADF3311A5D289E0064C628 /* DLMKStarWarsCharacter.m in Sources */,
 				65ADF3251A5D24CB0064C628 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
