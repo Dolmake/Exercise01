@@ -17,20 +17,13 @@
 + (instancetype) jediMasterWithName: (NSString*) aName{
     return [[self alloc] initJediMasterWithName:aName];
 }
-+ (instancetype) jediMasterWithName: (NSString*) aName
++ (instancetype) jediWithName: (NSString*) aName
                       midichlorians: (int) aMidichlorians
                          lightSaber: (DLMKLightSaber*) aLightSaber
                           padawanOf: (DLMKJedi*) aMaster{
-    return [[self alloc] initJediMasterWithName:aName
-                                  midichlorians: aMidichlorians
-                                     lightSaber:aLightSaber
-                                      padawanOf:aMaster];
+    return [[self alloc] initWithName:aName midichlorians:aMidichlorians lightSaber:aLightSaber padawanOf:aMaster];
 }
-+ (instancetype) jediMasterWithName: (NSString*) aName
-                          padawanOf: (DLMKJedi*) aMaster{
-    return [[self alloc] initJediMasterWithName:aName
-                                      padawanOf:aMaster];
-}
+
 
 
 #pragma mark - Instance Methods
@@ -49,47 +42,35 @@
 }
 
 //Convenience Initializers
-- (instancetype) initWithName: (NSString*) aName{
-    return [ self initWithName:aName
-                 midichlorians:100
-                    lightSaber: [DLMKLightSaber lightSaberBlue]
-                     padawanOf: nil];
+- (instancetype) initJediMasterWithName: (NSString*) aName{
+    return [self initWithName:aName
+                midichlorians:1000
+                   lightSaber:[DLMKLightSaber lightSaberGreen]
+                    padawanOf:nil];
 }
 
-- (instancetype) initJediMasterWithName: (NSString*) aName{
-    return [self initJediMasterWithName:aName
-                          midichlorians:1000
-                             lightSaber: [DLMKLightSaber lightSaberGreen]
-                              padawanOf:nil];
-}
-- (instancetype) initJediMasterWithName: (NSString*) aName
-                          midichlorians: (int) aMidichlorians
-                             lightSaber: (DLMKLightSaber*) aLightSaber
-                              padawanOf: (DLMKJedi*) aMaster{
+- (instancetype) initWithName: (NSString*) aName{
     return [self initWithName:aName
-                midichlorians:aMidichlorians
-                   lightSaber:aLightSaber
-                    padawanOf:aMaster];
-}
-- (instancetype) initJediMasterWithName: (NSString*) aName
-                                padawanOf : (DLMKJedi*) aMaster{
-        return [self initJediMasterWithName: aName
-                              midichlorians: 1000
-                                 lightSaber: [DLMKLightSaber lightSaberGreen]
-                                  padawanOf:aMaster];
+                midichlorians:100
+                   lightSaber:[DLMKLightSaber lightSaberBlue]
+                    padawanOf:nil];
     
 }
-
 
 //Public interface
 - (NSString*) unsheathe{
     return @"█||||||(•)█Ξ█████████████████████";
 }
 - (BOOL) isEqualToJedi:(DLMKJedi *)other{
-    return self.name == other.name &&
+    /*return [self.name isEqualToString:other.name] &&
         self.midichlorians == other.midichlorians &&
         [self.lightSaber isEqual:other.lightSaber ] &&
-    [self.padawanOf isEqual:other.padawanOf];
+    [self.padawanOf isEqual:other.padawanOf];*/
+    BOOL n = [self.name isEqualToString:other.name];
+    BOOL m = self.midichlorians == other.midichlorians;
+    BOOL l = [self.lightSaber isEqual:other.lightSaber ];
+    BOOL p = [self hasSameMaster:other];
+    return n && m && l && p;
 }
 
 //override
@@ -103,8 +84,15 @@
 }
 
 - (NSString*) description{
-    return [NSString stringWithFormat:@"Jedi: %@, mid=%d, master=%@, saber=%@",
+    return [NSString stringWithFormat:@"Name: %@,\n mid=%d, \n master=%@, \n saber=%@",
             self.name, self.midichlorians, self.padawanOf.name, self.lightSaber.description ];
+}
+
+//MISC
+- (BOOL) hasSameMaster:(DLMKJedi*) other{
+    if (self.padawanOf == other.padawanOf) return YES;
+    if ([self.padawanOf isEqualToJedi:other.padawanOf]) return YES;
+    return NO;
 }
 
 

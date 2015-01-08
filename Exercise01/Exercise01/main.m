@@ -38,14 +38,17 @@ int main(int argc, const char * argv[]) {
         
         //Qui-Gon Jinn, Obi Wan Kenobi, Yoda y Luke Skywalker
         DLMKJedi* yoda = [DLMKJedi jediMasterWithName:@"Yoda"];
-        DLMKJedi* quiGonJinn = [DLMKJedi jediMasterWithName:@"Qui-Gon Jinn" padawanOf:yoda  ];
-        DLMKJedi* obiWan = [DLMKJedi jediMasterWithName:@"Obi Wan Kenobi" padawanOf:quiGonJinn];
+        DLMKJedi* quiGonJinn = [DLMKJedi jediWithName:@"Qui-Gon Jinn" midichlorians:1000 lightSaber:[DLMKLightSaber lightSaberGreen] padawanOf:yoda ];
+        DLMKJedi* obiWan = [DLMKJedi jediWithName:@"Obi Wan Kenobi" midichlorians:1000 lightSaber:[DLMKLightSaber lightSaberGreen] padawanOf:quiGonJinn ];
         DLMKJedi* luke = [DLMKJedi jediWithName:@"Luke Skywalker"];
+        DLMKJedi* lukeClone = [DLMKJedi jediWithName:@"Luke Skywalker"];
         
-        NSLog(@"Jedi %@", yoda);
-        NSLog(@"Jedi %@", quiGonJinn);
-        NSLog(@"Jedi %@", obiWan);
-        NSLog(@"Jedi %@", luke);
+        NSLog(@"\n ******Jedi %@", yoda);
+        NSLog(@"\n ******Jedi %@", quiGonJinn);
+        NSLog(@"\n ******Jedi %@", obiWan);
+        NSLog(@"\n ******Jedi %@", luke);
+        
+         NSLog(@"[luke isEqual: lukeClone] = %@", ([luke isEqual: lukeClone] ? @"YES" : @"NO"));
         
     }
     return 0;

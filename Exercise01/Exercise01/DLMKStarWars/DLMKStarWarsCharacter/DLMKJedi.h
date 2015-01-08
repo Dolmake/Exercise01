@@ -15,12 +15,11 @@
 #pragma mark - Class Methods
 + (instancetype) jediWithName: (NSString*) aName;
 + (instancetype) jediMasterWithName: (NSString*) aName;
-+ (instancetype) jediMasterWithName: (NSString*) aName
-                      midichlorians: (int) aMidichlorians
-                         lightSaber: (DLMKLightSaber*) aLightSaber
-                          padawanOf: (DLMKJedi*) aMaster;
-+ (instancetype) jediMasterWithName: (NSString*) aName
-                          padawanOf: (DLMKJedi*) aMaster;
++ (instancetype) jediWithName: (NSString*) aName
+                midichlorians: (int) aMidichlorians
+                   lightSaber: (DLMKLightSaber*) aLightSaber
+                    padawanOf: (DLMKJedi*) aMaster;
+
 
 #pragma mark - Properties
 @property int midichlorians;
@@ -36,14 +35,9 @@
                     padawanOf: (DLMKJedi*) aMaster;
 
 //Convenience Initializers
-- (instancetype) initWithName: (NSString*) aName;
 - (instancetype) initJediMasterWithName: (NSString*) aName;
-- (instancetype) initJediMasterWithName: (NSString*) aName
-                          midichlorians: (int) aMidichlorians
-                             lightSaber: (DLMKLightSaber*) aLightSaber
-                              padawanOf: (DLMKJedi*) aMaster;
-- (instancetype) initJediMasterWithName: (NSString*) aName
-                             padawanOf : (DLMKJedi*) aMaster;
+
+- (instancetype) initWithName: (NSString*) aName;
 
 //Public interface
 - (NSString*) unsheathe;
