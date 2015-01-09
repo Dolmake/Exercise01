@@ -1,0 +1,1 @@
+File to check "git push" on all "remotes"
