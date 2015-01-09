@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "DLMKStarWarsCharacter.h"
-#import "DLMKLightSaber.h"
+
+
+//Improves the compilation time
+@class DLMKLightSaber;
 
 @interface DLMKJedi : DLMKStarWarsCharacter
 

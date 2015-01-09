@@ -7,6 +7,7 @@
 //
 
 #import "DLMKJedi.h"
+#import "../DLMKLightSaber.h"
 
 @implementation DLMKJedi
 
@@ -62,15 +63,10 @@
     return @"█||||||(•)█Ξ█████████████████████";
 }
 - (BOOL) isEqualToJedi:(DLMKJedi *)other{
-    /*return [self.name isEqualToString:other.name] &&
+    return [self.name isEqualToString:other.name] &&
         self.midichlorians == other.midichlorians &&
         [self.lightSaber isEqual:other.lightSaber ] &&
-    [self.padawanOf isEqual:other.padawanOf];*/
-    BOOL n = [self.name isEqualToString:other.name];
-    BOOL m = self.midichlorians == other.midichlorians;
-    BOOL l = [self.lightSaber isEqual:other.lightSaber ];
-    BOOL p = [self hasSameMaster:other];
-    return n && m && l && p;
+        [self hasSameMaster:other];
 }
 
 //override
