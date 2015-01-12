@@ -70,11 +70,16 @@
 
 //override
 - (NSString*) description{
-    return [NSString stringWithFormat:@"R=%f , G=%f, B=%f" ,
+    
+    //Color could not being descripted as RGB
+    /*return [NSString stringWithFormat:@"R=%f , G=%f, B=%f" ,
             [[self color] redComponent ],
             [[self color] greenComponent],
             [[self color] blueComponent]
-            ];
+            ];*/
+    
+    //so...
+    return [NSString stringWithFormat:@"Color: %@", self.color];
 }
 
 - (BOOL) isEqual:(id)object{
@@ -89,11 +94,16 @@
 }
 
 - (BOOL) isEqualToLightSaber:(DLMKLightSaber *)other{
-        
+    
+    /*  We Should compare Color Components
     return self.color.redComponent - other.color.redComponent < 0.001f &&
             self.color.greenComponent - other.color.greenComponent < 0.001f &&
             self.color.blueComponent - other.color.blueComponent < 0.001f &&
     self.color.alphaComponent - other.color.alphaComponent < 0.001f;
+     */
+    
+    return [self.color isEqual: other.color];
+    
 }
 
 
