@@ -38,7 +38,7 @@
                     padawanOf: (DLMKJedi*) aMaster;
 
 //Convenience Initializers
-- (instancetype) initJediMasterWithName: (NSString*) aName;
+- (instancetype) initWithJediMasterNamed: (NSString*) aName;
 
 - (instancetype) initWithName: (NSString*) aName;
 

@@ -16,7 +16,7 @@
     return [[self alloc] initWithName:aName];
 }
 + (instancetype) jediMasterWithName: (NSString*) aName{
-    return [[self alloc] initJediMasterWithName:aName];
+    return [[self alloc] initWithJediMasterNamed:aName];
 }
 + (instancetype) jediWithName: (NSString*) aName
                       midichlorians: (int) aMidichlorians
@@ -43,7 +43,7 @@
 }
 
 //Convenience Initializers
-- (instancetype) initJediMasterWithName: (NSString*) aName{
+- (instancetype) initWithJediMasterNamed: (NSString*) aName{
     return [self initWithName:aName
                 midichlorians:1000
                    lightSaber:[DLMKLightSaber lightSaberGreen]
