@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Dolmake. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <AppKit/AppKit.h>
+@import Foundation;
+@import AppKit;
 
 @interface DLMKLightSaber : NSObject
 
@@ -33,18 +33,18 @@
 #pragma mark - Instance Methods
 
 //Designated Initializer
-- (instancetype) initWithR:(CGFloat) r
+- (id) initWithR:(CGFloat) r
                          G:(CGFloat) g
                          B:(CGFloat) b;
 
 //Convenience Initializers
-- (instancetype) initWithBlue;
+- (id) initWithBlue;
 
-- (instancetype) initWithGreen;
+- (id) initWithGreen;
 
-- (instancetype) initWithRed;
+- (id) initWithRed;
 
-- (instancetype) initWithPurple;
+- (id) initWithPurple;
 
 //Public interface
 - (BOOL) isEqualToLightSaber:(DLMKLightSaber*) other;

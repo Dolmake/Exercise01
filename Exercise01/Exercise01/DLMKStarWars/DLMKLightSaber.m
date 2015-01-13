@@ -38,7 +38,7 @@
 
 #pragma mark - Instance methods
 //Designated Initializer
-- (instancetype) initWithR:(CGFloat)r
+- (id) initWithR:(CGFloat)r
                          G:(CGFloat)g
                          B:(CGFloat)b{
     
@@ -52,19 +52,19 @@
 }
 
 //Convenience Initializers
-- (instancetype) initWithBlue{
+- (id) initWithBlue{
     return [ self initWithR:0.0f G:0.0f B:0.95f ];
 }
 
-- (instancetype) initWithGreen{
+- (id) initWithGreen{
     return [ self initWithR:0.0f G:0.95f B:0.0f];
 }
 
-- (instancetype) initWithRed{
+- (id) initWithRed{
     return [ self initWithR:0.95f G:0.0f B:0.0f];
 }
 
-- (instancetype) initWithPurple{
+- (id) initWithPurple{
     return [self initWithR:0.95f G:0.0f B:0.95f];
 }
 
